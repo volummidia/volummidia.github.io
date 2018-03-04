@@ -1,0 +1,86 @@
+body {
+    background-color: #205250;
+}
+.navi{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+}
+.carousel {
+    width: 100%; /* Altera a largura do carousel */
+    height: 80%; /* Altera a altura do carousel */
+}
+
+td {
+	width: 50%;
+}
+ .logo {
+ 	font-family: arial black;
+ }
+.slide {
+    z-index: 0;
+}
+ #borda {
+ 	border-color: orange;
+ 	color:orange;
+ }
+ .mr-sm-2 {
+ 	border-color: orange;
+ }
+ .form-control {
+ 	border-color: orange;
+ }
+ .book {
+  background-color: #304250;
+  }
+ 
+ .row {
+ 	width: 100%;
+ }
+ #colin {
+ 	margin-left: 2%;
+ }
+
+ h2 {
+ 	color: white;
+    font-family: cursive;
+ }
+ .mp {
+    background-image:url("imagens/padrao.png"); 
+     }
+ #a {
+ color: black;
+ } 
+ .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.book {
+	border-radius: 20px;
+}
+.media {
+    background-color: #205250;
+	border:solid;
+	border-radius: 6px;
+}
+a {
+	color: white;
+}
+td {
+	padding: 5%;
+}
+ a:hover {
+		text-decoration: none;
+		color: #ff791f;
+	}
+    .wts:hover {
+        color: green;
+    }
