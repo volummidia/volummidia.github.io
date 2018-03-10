@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <link rel="shortcut icon" href="imagens/diamante.png" type="image/x-icon" />
 	<title>Radio Cristal FM 87.9</title>
 	<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <script src="script.js" charset="ISO-8859-1"></script>
+        <script src="script.js" charset="utf-8"></script>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-   PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
    
@@ -40,7 +41,7 @@
             color:white;
         }
       .player {
-        position: fixed;
+        position: absolute;
         top: 0;
         right: 0;
         width: 40%;
@@ -52,24 +53,24 @@
     </style>
     
 
-	<body style="background-color: black;">
+	<body style="background-color:#ffccff;" id="inicio">
 		 <nav class="navbar navbar-expand-lg navbar navi navbar-light" style="background-color: white;">
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <a class="navbar-brand" href="#carouselExampleIndicators" style="color: purple; font-family: fantasy; font-size: 200%;">Rádio Cristal <span style=" font-family: arial; font-size: 70%"> FM</span> <img height="40px" width="40px" src="imagens/diamante.png"></a>
+    <a class="navbar-brand" href="#inicio" style="color: purple; font-family: fantasy; font-size: 200%;">Rádio Cristal <span style=" font-family: arial; font-size: 70%"> FM</span> <img height="40px" width="40px" src="imagens/diamante.png"></a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
       <li class="nav-item active">
-        <a class="nav-link" href="#" style="color: #DA70D6; font-family: arial;">Home<span class="sr-only"></span></a>
+        <a class="nav-link" href="#local" style="color: #DA70D6; font-family: arial;">Localização<span class="sr-only"></span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="#" style="color: #DA70D6;">Programação</a>
+        <a class="nav-link active" href="#prog" style="color: #DA70D6;">Programação</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="#" style="color: #DA70D6;">Sobre</a>
+        <a class="nav-link active" href="#hist" style="color: #DA70D6;">Sobre</a>
       </li>
       
    
@@ -127,31 +128,25 @@
             </div>
         </div>
       </div><br>
-      <div class="row">
+      <div class="row" id="local">
         <div class="col">
           <h3 align="center">Visite a Capital da pedra <span style="color: purple;">Ametista</span> </h3><hr>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d453558.59158669895!2d-53.4633437491348!3d-27.362392726974175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fb6f7362367dd3%3A0xe5f10a2bdef36b9e!2sAmetista+do+Sul%2C+RS%2C+98465-000!5e0!3m2!1spt-BR!2sbr!4v1520463649363" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe><br><br>
-          <div>
+          <div id="prog">
             <h3 align="center">Confira a nossa programação</h3><hr>
             <div>
               <button onclick="seg()" class="button">Segunda-Feira</button><button onclick="ter()" class="button">Terça-Feira</button><button onclick="qua()" class="button">Quarta-Feira</button><button onclick="qui()" class="button">Quinta-Feira</button><button onclick="sex()" class="button">Sexta-Feira</button><button onclick="sab()" class="button">Sábado</button><button onclick="dom()" class="button">Domingo</button><hr>
               <div id="dia">
-                <h6>Segunda-Feira</h6>
-                <p>6h-8h-sdhausdhia com apresentação de auhsausausahs</p>
-                <p>6h-8h-sdhausdhia com apresentação de auhsausausahs</p>
-                <p>6h-8h-sdhausdhia com apresentação de auhsausausahs</p>
-                <p>6h-8h-sdhausdhia com apresentação de auhsausausahs</p>
-                <p>6h-8h-sdhausdhia com apresentação de auhsausausahs</p>
-                <p>6h-8h-sdhausdhia com apresentação de auhsausausahs</p>
-                <p>6h-8h-sdhausdhia com apresentação de auhsausausahs</p>
+              <h2>Carregando...</h2>
                 
               </div><hr><br>
             </div>
           </div>
-          <h3 align="center">Conheça a História da nossa rádio</h3>
+          <h3 align="center" id="hist">Conheça a História da nossa rádio</h3>
         </div>
         <div class="col-lg-3">
           <h2>Apoiadores:</h2>
+          <img src="imagens/foto3.jpg" class="img-thumbnail">
         </div>
       </div>      
     </div>
