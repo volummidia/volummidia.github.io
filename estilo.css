@@ -2,7 +2,7 @@ body {
     background-color: #205250;
 }
 .navi{
-    position: fixed;
+    position: absolute;
     height: 80px;
     left: 0;
     top: 0;
@@ -11,13 +11,19 @@ body {
 
 }
 .dcp {
-    position: fixed;
+    position: absolute;
     top: 20px;
     right: 10px;
 }
 .cp {
-    position: fixed;
-    right: 50px;
+    position: absolute;
+    right: 40px;
+}
+.lista {
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    width: 200px;
 }
 li, ul {
     background-color: black;
