@@ -8,7 +8,7 @@
         <!-- Meta tags necessárias -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-       <link rel="shortcut icon" href="icone.png" type="image/x-icon" /> 
+        <link rel="shortcut icon" href="icone.png" type="image/x-icon" /> 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-   PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
    
@@ -17,11 +17,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
-    <link href="assets/css/font-awesome.css" rel="stylesheet">
-    <link href="assets/css/docs.css" rel="stylesheet" >
+        <link href="assets/css/font-awesome.css" rel="stylesheet">
+        <link href="assets/css/docs.css" rel="stylesheet" >
         <link href="bootstrap-social.css" rel="stylesheet" >
         <link href="estilo.css" rel="stylesheet">
-
     </head>
     
     <body style="background-color: black">
@@ -47,12 +46,48 @@
       </li>
    
   </ul>
-  <div>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="O que você procura?" aria-label="Search">
-      <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Pesquisar</button>
-     
-    </form>
+  <div  class="dcp">
+   <input type="text" id="title" placeholder="Digite o título do filme" class="cp">
+
+<ul id="movies"></ul>
+<script type="text/javascript">
+  const movies = [{
+    title: "Alice no País das Maravilhas",
+    url: "alice.html"
+  },
+  {
+    title: "Harry Potter e a Pedra Filosofal",
+    url: "harry.html"
+  },
+  {
+    title: "Karate Kid",
+    url: "karate.html"
+  }
+];
+
+// Estes elementos servirão para a manipulação do DOM: elementos HTML
+const title = document.getElementById("title");
+const list = document.getElementById("movies");
+
+// Aqui atribuímos uma função ao evento `keyup` do campo no HTML
+// Isto é, sempre que uma tecla for pressionada, a função será executada:
+title.addEventListener("keyup", function(event) {
+
+  // Filtramos a lista de filmes com base no texto digitado:
+  const matchs = movies.filter(value => {
+
+    // Se o texto digitado for encontrado no título, retorna o registro:
+    return value.title.indexOf(this.value) !== -1;
+
+  });
+   
+  // Exibe no HTML a lista de filmes do resultado do filtro anterior:
+  list.innerHTML = "";
+  for (let movie of matchs) {
+    list.innerHTML += "<li><a href='"+movie.url+"'>"+movie.title+"</a></li>";
+  }
+});
+</script>
   </div>
 </div>
 </nav>
@@ -302,7 +337,11 @@
  <p class="small">Página desenvolvida por <a href="https://www.facebook.com/danielhenrique.lucietto?ref=bookmarks">Daniel H. Curti</a> - © 2018</p>
 </div>
 </div>
-       </div>  
-          
+       </div> 
+       <div style="background-color: white">
+           <input type="text" id="title" placeholder="Digite o título do filme">
+
+<ul id="books">TESTE</ul>
+</div>
     </body>
 </html>
