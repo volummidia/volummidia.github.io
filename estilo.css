@@ -19,13 +19,16 @@ body {
 }
 .lista {
   position: relative;
-  top: 60px;
+  top: 40px;
   rigth: 5px;
   width: 300px;
 }
 .cp {
     position: fixed;
     right: 50px;
+    width: 200px;
+    border-radius: 10px;
+    border-color: orange;
 }
 li, ul {
     background-color: black;
