@@ -23,11 +23,15 @@ body {
   width: 300px;
 }
 .cp {
-    position: relative;
-    right: 100px;
+    position: fixed;
+    right: 50px;
     width: 200px;
     border-radius: 5px;
     border-color: orange;
+}
+.botao {
+    position: fixed;
+    right: 10px;
 }
 li, ul {
     background-color: black;
