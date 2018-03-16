@@ -20,8 +20,8 @@ body {
 .lista {
   position: fixed;
   top: 60px;
-  width 200px;
-  rigth 5px;
+  width: 200px;
+  rigth: 5px;
 }
 .cp {
     position: fixed;
