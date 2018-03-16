@@ -8,14 +8,27 @@ body {
     top: 0;
     width: 100%;
     z-index: 1;
+    background-color: black;
+
 
 }
 .dcp {
+<<<<<<< HEAD
     position: absolute;
     top: 20px;
+=======
+    position: fixed;
+>>>>>>> 58f35599ff465f16dbe77d511f1e7a16be69ead3
     right: 10px;
 }
+.lista {
+  position: relative;
+  top: 40px;
+  rigth: 5px;
+  width: 300px;
+}
 .cp {
+<<<<<<< HEAD
     position: absolute;
     right: 40px;
 }
@@ -24,6 +37,18 @@ body {
     right: 10px;
     top: 60px;
     width: 200px;
+=======
+    position: fixed;
+    right: 110px;
+    width: 150px;
+    height: 36px;
+    border-radius: 5px;
+    border-color: orange;
+}
+.botao {
+    position: fixed;
+    right: 10px;
+>>>>>>> 58f35599ff465f16dbe77d511f1e7a16be69ead3
 }
 li, ul {
     background-color: black;
