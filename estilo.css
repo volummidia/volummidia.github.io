@@ -18,9 +18,10 @@ body {
     right: 10px;
 }
 .lista {
+  position: relative;
   top: 60px;
-  width: 300px;
   rigth: 5px;
+  width: 300px;
 }
 .cp {
     position: fixed;
