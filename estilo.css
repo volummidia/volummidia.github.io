@@ -24,8 +24,8 @@ body {
 }
 .cp {
     position: fixed;
-    right: 50px;
-    width: 200px;
+    right: 100px;
+    width: 150px;
     border-radius: 5px;
     border-color: orange;
 }
