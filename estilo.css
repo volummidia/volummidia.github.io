@@ -17,6 +17,10 @@ body {
     top: 20px;
     right: 10px;
 }
+.lista {
+  position: fixed;
+  top: 60px;
+}
 .cp {
     position: fixed;
     right: 50px;
