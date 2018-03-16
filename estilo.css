@@ -2,7 +2,7 @@ body {
     background-color: #205250;
 }
 .navi{
-    position: absolute;
+    position: fixed;
     height: 80px;
     left: 0;
     top: 0;
@@ -13,12 +13,7 @@ body {
 
 }
 .dcp {
-<<<<<<< HEAD
-    position: absolute;
-    top: 20px;
-=======
     position: fixed;
->>>>>>> 58f35599ff465f16dbe77d511f1e7a16be69ead3
     right: 10px;
 }
 .lista {
@@ -28,16 +23,6 @@ body {
   width: 300px;
 }
 .cp {
-<<<<<<< HEAD
-    position: absolute;
-    right: 40px;
-}
-.lista {
-    position: absolute;
-    right: 10px;
-    top: 60px;
-    width: 200px;
-=======
     position: fixed;
     right: 110px;
     width: 150px;
@@ -48,7 +33,6 @@ body {
 .botao {
     position: fixed;
     right: 10px;
->>>>>>> 58f35599ff465f16dbe77d511f1e7a16be69ead3
 }
 li, ul {
     background-color: black;
@@ -58,37 +42,37 @@ li, ul {
     height: 80%; /* Altera a altura do carousel */
 }
 td {
-	width: 50%;
+    width: 50%;
 }
  .logo {
- 	font-family: arial black;
+    font-family: arial black;
  }
 .slide {
     z-index: 0;
 }
  #borda {
- 	border-color: orange;
- 	color:orange;
+    border-color: orange;
+    color:orange;
  }
  .mr-sm-2 {
- 	border-color: orange;
+    border-color: orange;
  }
  .form-control {
- 	border-color: orange;
+    border-color: orange;
  }
  .book {
   background-color: #304250;
   }
  
  .row {
- 	width: 100%;
+    width: 100%;
  }
  #colin {
- 	margin-left: 2%;
+    margin-left: 2%;
  }
 
  h2 {
- 	color: white;
+    color: white;
     font-family: cursive;
  }
  .mp {
@@ -107,23 +91,23 @@ td {
     text-align: center;
 }
 .book {
-	border-radius: 20px;
+    border-radius: 20px;
 }
 .media {
     background-color: #205250;
-	border:solid;
-	border-radius: 6px;
+    border:solid;
+    border-radius: 6px;
 }
 a {
-	color: white;
+    color: white;
 }
 td {
-	padding: 5%;
+    padding: 5%;
 }
  a:hover {
-		text-decoration: none;
-		color: #ff791f;
-	}
+        text-decoration: none;
+        color: #ff791f;
+    }
     .wts:hover {
         color: green;
     }
