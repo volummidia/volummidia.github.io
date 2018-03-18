@@ -47,34 +47,38 @@
    
   </ul>
   <div  class="dcp">
-   <input type="text" id="title" placeholder="Procure seu book" class="cp">
+   <input type="text" id="title" placeholder="Procure seu book" class="cp" onkeyup="this.value = this.value.toLowerCase()">
   <button class="btn btn-outline-warning my-2 my-sm-0 botao" type="submit">Pesquisar</button>
-<ul id="movies" class="lista"></ul>
+<ul id="books" class="lista" value=""></ul>
 <script type="text/javascript">
-  const movies = [{
-    title: "Alice no País das Maravilhas",
-    url: "alice.html"
+  const books = [{
+    name: "Anthony Gonzatti",
+    title: "anthony gonzatti",
+    url: "books/anthony_gonzzati/index.html"
   },
   {
-    title: "Harry Potter e a Pedra Filosofal",
+    name: "Cristiano Bertoletti",
+    title: "cristiano bertoletti",
     url: "harry.html"
   },
   {
-    title: "Karate Kid",
+    name: "Cesar Gonzzatti",
+    title: "cesar gonzzatti",
     url: "karate.html"
   }
 ];
 
 // Estes elementos servirão para a manipulação do DOM: elementos HTML
 const title = document.getElementById("title");
-const list = document.getElementById("movies");
+const list = document.getElementById("books");
 
 // Aqui atribuímos uma função ao evento `keyup` do campo no HTML
 // Isto é, sempre que uma tecla for pressionada, a função será executada:
 title.addEventListener("keyup", function(event) {
+  if (title.value!="") {
 
   // Filtramos a lista de filmes com base no texto digitado:
-  const matchs = movies.filter(value => {
+  const matchs = books.filter(value => {
 
     // Se o texto digitado for encontrado no título, retorna o registro:
     return value.title.indexOf(this.value) !== -1;
@@ -83,9 +87,12 @@ title.addEventListener("keyup", function(event) {
    
   // Exibe no HTML a lista de filmes do resultado do filtro anterior:
   list.innerHTML = "";
-  for (let movie of matchs) {
-    list.innerHTML += "<li><a href='"+movie.url+"'>"+movie.title+"</a></li>";
+  for (let book of matchs) {
+    list.innerHTML += "<li><a href='"+book.url+"'>"+book.name+"</a></li>";
   }
+}else{
+  list.innerHTML = "";
+}
 });
 </script>
   
@@ -338,10 +345,8 @@ title.addEventListener("keyup", function(event) {
  <p class="small">Página desenvolvida por <a href="https://www.facebook.com/danielhenrique.lucietto?ref=bookmarks">Daniel H. Curti</a> - © 2018</p>
 </div>
 </div>
-<<<<<<< HEAD
-=======
+
        </div> 
       
->>>>>>> 58f35599ff465f16dbe77d511f1e7a16be69ead3
     </body>
 </html>
