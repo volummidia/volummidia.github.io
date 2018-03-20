@@ -10,10 +10,7 @@ body {
     z-index: 1;
     background-color: black;
 }
-.books {
-    position: relative;
-  top:50px; 
-}
+
 .cp {
     width: 150px;
     height: 36px;
