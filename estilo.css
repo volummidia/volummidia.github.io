@@ -1,8 +1,8 @@
 body {
     background-color: white;
 }
-.navi{
-    position: absolute;
+.navi {
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
