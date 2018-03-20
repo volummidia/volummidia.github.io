@@ -13,12 +13,12 @@ body {
 }
 .dcp {
     position: fixed;
-    top: 20px;
+    top: 5px;
     right: 10px;
 }
 .lista {
   position: relative;
-  top: 40px;
+  top: 25px;
   width: 300px;
 }
 .cp {
