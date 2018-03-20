@@ -12,6 +12,7 @@ body {
 }
 
 .cp {
+    position: fixed;
     width: 150px;
     height: 36px;
     border-radius: 5px;
