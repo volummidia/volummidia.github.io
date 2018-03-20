@@ -43,10 +43,6 @@ td {
  .form-control {
     border-color: orange;
  }
-.books {
-  position:fixed;
-  top:50px;
-  }
  .book {
   background-color: #304250;
   }
