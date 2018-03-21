@@ -28,7 +28,7 @@
         <!-- Barra de navegação - Bootstrap -->
 
         <nav class="navbar navbar-expand-lg navbar navi navbar-dark" style="background-color: black;">
-      <a class="navbar-brand" href="#" style="color: orange; font-family: arial black;"style="color: orange; font-family: arial black;">Vólum Mídia</a>
+      <a class="navbar-brand" href="#" style="color:orange; font-family: arial black;">Vólum Mídia</a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -46,12 +46,12 @@
       </li>
    
   </ul>      
-          </div><div>
+          <div>
     <form class="form-inline">
    <input type="text" class="cp" id="title" placeholder="Procure seu book" onkeyup="this.value = this.value.toLowerCase()">
  <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Pesquisar</button>
     </form>
-     </div>
+     </div><div class="lista">
 <ul id="books" class="books" value=""></ul>
 <script type="text/javascript">
   const books = [{
@@ -98,7 +98,8 @@ title.addEventListener("keyup", function(event) {
 }
 });
 </script>
-
+          </div>
+        </div>
        </div>
       </nav>
 
@@ -164,10 +165,11 @@ title.addEventListener("keyup", function(event) {
           <hr>
           
               <div class="row"  id="books">
-                <div class="col"><a href="https://facebook.com"><img class="img-thumbnail" src="imagens/foto3.jpg"><p align="center" style="font-family: arial black;"><b>Books</b></p></a></div>
-                <div class="col"><a href="https://facebook.com"><img class="img-thumbnail" src="imagens/foto1.jpg"><p align="center" style="font-family: arial black;"><b>Videos</b></p></a></div> 
-                <div class="col"><a href="https://facebook.com"><img class="img-thumbnail" src="imagens/foto3.jpg"><p align="center" style="font-family: arial black;"><b>Fotos</b></p></a></div>
-                <div class="col"><a href="https://facebook.com"><img class="img-thumbnail" src="imagens/foto3.jpg"><p align="center" style="font-family: arial black;"><b>Eventos</b></p></a></div> 
+                <div class="col"><a href="https://facebook.com"><img class="img-fluid" src="imagens/foto3.jpg"><p align="center" style="font-family: arial black;"><b>Books</b></p></a></div>
+                <div class="col"><a href="https://facebook.com"><img class="img-fluid"  src="imagens/foto1.jpg"><p align="center" style="font-family: arial black;"><b>Videos</b></p></a></div> 
+                <div class="col"><a href="https://facebook.com"><img class="img-fluid" src="imagens/foto3.jpg"><p align="center" style="font-family: arial black;"><b>Fotos</b></p></a></div>
+
+                <div class="col"><a href="https://facebook.com"><img class="img-fluid" src="imagens/foto3.jpg"><p align="center" style="font-family: arial black;"><b>Eventos</b></p></a></div> 
 
           </div>
         </div>
