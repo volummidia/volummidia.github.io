@@ -23,7 +23,20 @@ body {
     right: 0;
     width: 250px;
 }
+.book{
+    text-align: center;
+}
+.thumb {
 
+   max-width: 50%;
+   min-width: 50%;
+}
+.divisao {
+    width: 70px;
+    height: 5px;
+    background-color: brown;
+    border-radius: 100px;
+}
 
 li, ul {
     background-color: black;
@@ -36,4 +49,16 @@ li, ul {
  #borda {
     border-color: orange;
     color:orange;
+ }
  
+a {
+    color: white;
+}
+
+ a:hover {
+        text-decoration: none;
+        color: #ff791f;
+    }
+    .wts:hover {
+        color: green;
+    }

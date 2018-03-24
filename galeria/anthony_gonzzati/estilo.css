@@ -104,9 +104,20 @@ a {
 td {
     padding: 5%;
 }
- a:hover {
+img {
+      width:auto;
+      max-width: 10%;
+
+      height:auto;
+      max-height:10%; 
+}
+ img:active, img:visited {
         text-decoration: none;
         color: #ff791f;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
     }
     .wts:hover {
         color: green;
