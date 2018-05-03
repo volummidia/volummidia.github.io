@@ -23,41 +23,42 @@
         <link href="estilo.css" rel="stylesheet">
     </head>
     
-    <body style="background-color: black">
+    <body>
         
         <!-- Barra de navegação - Bootstrap -->
 
         <nav class="navbar navbar-expand-lg navbar navi navbar-dark" style="background-color: black;">
-      <a class="navbar-brand" href="#" style="color:orange; font-family: arial black;">Vólum Mídia</a>
+          <a class="navbar-brand" href="index.html"><span class="logo">Vólum Mídia</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown" style="background-color: black">
-    <ul class="navbar-nav mr-auto" style="background-color: black">
-      <li class="nav-item active">
-        <a class="nav-link" href="#home">Home<span class="sr-only"></span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="#books">Galeria</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="#contato">Fale Conosco</a>
-      </li>
-   
-  </ul>      
-          <div>
-    <form class="form-inline">
-   <input type="text" class="cp" id="title" placeholder="Procure seu book" onkeyup="this.value = this.value.toLowerCase()">
- <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Pesquisar</button>
-    </form>
-     </div><div class="lista">
-<ul id="books" class="books" value=""></ul>
-<script type="text/javascript">
+              <div class="collapse navbar-collapse" id="navbarNavDropdown" style="background-color: black">
+                <ul class="navbar-nav mr-auto" style="background-color: black">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#home">Home<span class="sr-only"></span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#books">Galeria</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#contato">Fale Conosco</a>
+                  </li>
+                </ul>
+
+                <!-- caixa de pesquisa e script -->      
+              <div>
+                <form class="form-inline">
+                  <input type="text" class="cp" id="title" placeholder="Procure seu book" onkeyup="this.value = this.value.toLowerCase()">| 
+                  <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Pesquisar</button>
+                </form>
+                </div><div class="lista">
+                  <ul id="books" class="books" value=""></ul>
+                    <script type="text/javascript">
   const books = [{
     name: "Anthony Gonzatti",
     title: "anthony gonzatti",
-    url: "books/anthony_gonzzati/index.html"
+    url: "galeria/anthony_gonzzati/index.html"
   },
   {
     name: "Cristiano Bertoletti",
@@ -142,27 +143,16 @@ title.addEventListener("keyup", function(event) {
             <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
-            </a>
+            </a><hr>
             </div>
             
-                <!--book
-        
-<a href="https://www.facebook.com/volummidia/" id="a">
-        <div class="col media">
-  
-  <div class="media-body">
-    <h1 class="mt-0" align="center" style="color: white;">Vólum Mídia</h1>
-    
-  </div>
-  
-</div>
-</a>
--->
+              
 
-        <div class="book" style="background-color: #1f1f1f;">
-      <br>
-          <h1 align="center" style="color: white; font-family:cursive; ">Galeria de fotos</h1>
-          <hr>
+        <div class="book" style="background-color:black;">
+      
+
+          <h1 align="center" style="color: white; font-family:cursive; ">Galerias</h1>
+         
           
               <div class="row"  id="books">
                 <div class="col"><a href="https://facebook.com"><img class="img-fluid" src="imagens/foto3.jpg"><p align="center" style="font-family: arial black;"><b>Books</b></p></a></div>
@@ -170,110 +160,33 @@ title.addEventListener("keyup", function(event) {
                 <div class="col"><a href="https://facebook.com"><img class="img-fluid" src="imagens/foto3.jpg"><p align="center" style="font-family: arial black;"><b>Fotos</b></p></a></div>
 
                 <div class="col"><a href="https://facebook.com"><img class="img-fluid" src="imagens/foto3.jpg"><p align="center" style="font-family: arial black;"><b>Eventos</b></p></a></div> 
+ 
+          </div>
+          <hr>
+        </div> 
+        <footer>
+          <div class="row" style="max-width: 100%">
+            <div class="col"><br><p>A <span class="logo">Vólum Mídia</span> tem o objetivo de te ajudar a eternizar os melhores momentos da sua vida, venha conhecer nosso trabalho, <a href="">CLIQUE AQUI</a> para falar conosco.</p></div> 
+              <div class="col"></div>
+               <div class="col"><p>Conheça nossas redes sociais:</p>
+                <div class="blur pic row"><a href=""><img src="imagens/facebook.jpg" class="icone"></a> <span style="color: white;">|  Facebook</span></div>
+                <div class="blur pic row"><a href=""><img src="imagens/twitter.png" class="icone"></a> <span style="color: white;">|  Twitter</span></div>
+                <div class="blur pic row"><a href=""><img src="imagens/instagram.png" class="icone"></a> <span style="color: white;">|   Instagram</span></div></div>
+
 
           </div>
-        </div>
+
+        </footer>
+
 
        
-        <!--<div class="book">
-        <div align="center"><h2 id="contato">Fale conosco</h2></div>
-        <hr>
-       
-        
-        <div class="container">
-  <div class="row align-items-start">
-    <div class="col-8">
-      <form name="formulario" method="post">
-<input type=hidden name="destino" value="volummidia@gmail.com">
-<input type=hidden name="enviado" value="http://www.danielcurti.github.io/">
-<p><b>Nome:</b><br>
-<input type=text class="form-control" name="nome" size="45"></p><br>
-<p><b>Email:</b><br>
-<input type=text class="form-control" name="email" size="45"></p><br>
-<p><b>Assunto:</b><br>
-<input type=text class="form-control" name="assunto" size="45"></p><br>
-<p><b>Mensagem:</b><br>
-<textarea name="Mensagem" class="form-control" rows="10" cols="60" wrap="virtual"></textarea></p><br>
-<p><input type="submit" value="Enviar Email" class="btn btn-dark"> <input type="reset" class="btn btn-dark" value="Limpar Formulário"></p>
-</form>
-    </div>
-    <div class="col">
-        <img class="mr-3" src="imagens/exemp.png" alt="Generic placeholder image">
-      <b>Daniel Henrique Curti</b>
-            <div class="text-center row">
-            <a class="mr-2 btn btn-social-icon  btn-twitter">
-    <span class = "fa fa-twitter"> </span>
-  </a>
-
-     
-      <a class="mr-2 btn btn-social-icon  btn-facebook">
-    <span class = "fa fa-facebook"> </span>
-  </a>
-
-     
-      <a class="mr-2 btn btn-social-icon  btn-instagram">
-    <span class = "fa fa-instagram"> </span>
-  </a>
-
-   <a class="mr-2 btn btn-social-icon  btn-whatsapp">
-    <span class = "fa fa-whatsapp"> </span>
-  </a>
-</div>
-            <hr>
-            <img class="mr-3" src="imagens/exemp.png" alt="Generic placeholder image">
-      <b>Daniel Henrique Curti</b>
-           <div class="text-center">
-            <a class="mr-2 btn btn-social-icon  btn-twitter">
-    <span class = "fa fa-twitter"> </span>
-  </a>
-
-     
-      <a class="mr-2 btn btn-social-icon  btn-facebook">
-    <span class = "fa fa-facebook"> </span>
-  </a>
-
-     
-      <a class="mr-2 btn btn-social-icon  btn-instagram">
-    <span class = "fa fa-instagram"> </span>
-  </a>
-
-   <a class="mr-2 btn btn-social-icon  btn-whatsapp">
-    <span class = "fa fa-whatsapp"> </span>
-  </a>
-</div>
-<hr>
-            <img class="mr-3" src="imagens/exemp.png" alt="Generic placeholder image">
-      <b>Daniel Henrique Curti</b>
-           <div class="text-center">
-            <a class="mr-2 btn btn-social-icon  btn-twitter">
-    <span class = "fa fa-twitter"> </span>
-  </a>
-
-     
-      <a class="mr-2 btn btn-social-icon  btn-facebook">
-    <span class = "fa fa-facebook"> </span>
-  </a>
-
-     
-      <a class="mr-2 btn btn-social-icon  btn-instagram">
-    <span class = "fa fa-instagram"> </span>
-  </a>
-
-     <a class="mr-2 btn btn-social-icon  btn-whatsapp">
-    <span class = "fa fa-whatsapp"> </span>
-  </a>
-  
-</div>
-    </div>
-    </div>
-  </div>
-</div>-->
+  <!--      
 <br>
  <div  style="background-color: black; color: white;"> <h3 align="center">Siga-nos nas redes sociais</h3><hr>
   <div class="row">
 
     <div class="col" id="contato">
-      <img class="mr-3" src="imagens/cris.jpg" alt="Generic placeholder image">
+      <img class="mr-2" src="imagens/cris.jpg" alt="Generic placeholder image">
       <b>Cristiano C. Bertoletti</b>
            <div class="text-center">
              <a class="mr-2 btn btn-social-icon  btn-twitter" href="https://twitter.com/cristianobert15">
@@ -350,7 +263,7 @@ title.addEventListener("keyup", function(event) {
 </div>
 </div>
 
-       </div> 
+       </div> -->
       
     </body>
 </html>

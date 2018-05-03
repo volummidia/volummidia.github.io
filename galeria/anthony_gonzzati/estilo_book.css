@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: white;
 }
 a {
     color: white;
@@ -44,29 +44,8 @@ li, ul {
     font-family: arial black;
     color: orange;
  }
-
- #books {
-    max-width: 100%;
-
- }
- .icone {
-    width: 30px;
-    height: 30px;
- }
-
- #borda {
+  #borda {
     border-color: orange;
     color:orange;
  }
- /*BLUR NOS ICONES*/
- .blur img {
-  -webkit-transition: all 0.1s ease;
-     -moz-transition: all 0.1s ease;
-       -o-transition: all 0.1s ease;
-      -ms-transition: all 0.1s ease;
-          transition: all 0.1s ease;
-}
- 
-.blur img:hover {
-  -webkit-filter: blur(2px);
-}
+
