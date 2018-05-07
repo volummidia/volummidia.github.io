@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+    
+
+        <title>Volum Midia</title>
+
+        <!-- Meta tags necessárias -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" href="icone.png" type="image/x-icon" /> 
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-   PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+   
+        <!-- Bibliotecas JavaScript que devem ser incluídas nessa ordem: jQuery.js, Popper.js e Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"> </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+        <link href="assets/css/font-awesome.css" rel="stylesheet">
+        <link href="assets/css/docs.css" rel="stylesheet" >
+        <link href="bootstrap-social.css" rel="stylesheet" >
+        <link href="estilo.css" rel="stylesheet">
+    </head>
+    
+    <body style="background-color: white;">
+        
+        <!-- Barra de navegação - Bootstrap -->
+
+        <nav class="navbar navbar-expand-lg navbar navi navbar-dark" style="background-color: black;">
+          <a class="navbar-brand" href="index.html"><span class="logo">Vólum Mídia</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+              <div class="collapse navbar-collapse" id="navbarNavDropdown" style="background-color: black">
+                <ul class="navbar-nav mr-auto" style="background-color: black">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#home">Home<span class="sr-only"></span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="galeria/index.html">Galeria</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#contato">Fale Conosco</a>
+                  </li>
+                </ul>
+
+                <!-- caixa de pesquisa e script -->      
+              <div>
+                <form class="form-inline">
+                  <input type="text" class="cp" id="title" placeholder="Procure seu book" onkeyup="this.value = this.value.toLowerCase()">| 
+                  <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Pesquisar</button>
+                </form>
+                </div><div class="lista">
+                  <ul id="books" class="books" value=""></ul>
+                    <script type="text/javascript">
+  const books = [{
+    name: "Anthony Gonzatti",
+    title: "anthony gonzatti",
+    url: "galeria/anthony_gonzzati/index.html"
+  },
+  {
+    name: "Cristiano Bertoletti",
+    title: "cristiano bertoletti",
+    url: "harry.html"
+  },
+  {
+    name: "Cesar Gonzzatti",
+    title: "cesar gonzzatti",
+    url: "karate.html"
+  }
+];
+
+// Estes elementos servirão para a manipulação do DOM: elementos HTML
+const title = document.getElementById("title");
+const list = document.getElementById("books");
+
+// Aqui atribuímos uma função ao evento `keyup` do campo no HTML
+// Isto é, sempre que uma tecla for pressionada, a função será executada:
+title.addEventListener("keyup", function(event) {
+  if (title.value!="") {
+
+  // Filtramos a lista de filmes com base no texto digitado:
+  const matchs = books.filter(value => {
+
+    // Se o texto digitado for encontrado no título, retorna o registro:
+    return value.title.indexOf(this.value) !== -1;
+
+  });
+   
+  // Exibe no HTML a lista de filmes do resultado do filtro anterior:
+  list.innerHTML = "";
+  for (let book of matchs) {
+    list.innerHTML += "<li><a href='"+book.url+"'>"+book.name+"</a></li>";
+  }
+}else{
+  list.innerHTML = "";
+}
+});
+</script>
+          </div>
+        </div>
+       </div>
+      </nav>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <form method="POST" action="funcoes.php">
+        <input type="text" name="id" id="id">
+        <input type="text" name="title" id="title">
+        <input type="text" name="msg" id="msg">
+        <input type="text" name="contato" id="contato">
+        <input type="submit" value="Ok" >
+      </form>
+
+      
+    </body>
+</html>
