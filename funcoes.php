@@ -1,49 +1,16 @@
 <?php
-   
-   function validarEmail($email) {
-	   
-       //Procura quantos @ (arrobas) tem no e-mail
-       $arrobas = 0;
-       $espacos = 0;   
-	   for ($x=0; $x<strlen($email); $x++) {
-		   if ( substr($email, $x, 1) == "@" )
-		      $arrobas++;
+   pegarEnviar();
+   function pegarEnviar() {
 
-	       if ( substr($email, $x, 1) == " " )
-	          $espacos++; 		      
-	   }
+   		$id = $_POST['id'];
+   		$assunto = $_POST['title'];
+   		$msg = $_POST['msg'];
+   		$contato = $_POST['contato'];
 	   
-	   if ($arrobas != 1)
-	       return false;
-	       
-	   if ($espacos > 0)
-	       return false;
-	   
-	   $pontos = 0; 
-	   for ($x = strpos($email, '@')+1; $x<strlen($email); $x++) {
-	       if ( substr($email, $x, 1) == "." )
-	          $pontos++;
-       }
-       
-       if ($pontos == 0)
-           return false;
-           
-       if (strlen($email) < 6)
-           return false;    
-       
-       if ( substr($email, 0, 1) == "@" )
-           return false;
-           
-       if ( substr($email, 0, 1) == "." )
-           return false; 
-       
-       if ( substr($email, strlen($email)-1, 1) == "." )
-           return false; 
-
-	   return true;
+       enviarEmail('danielcurtixpiratax@gmail.com', "$id", "$assunto", "$msg", "$contato");
    }
    
-   function enviarEmail($para, $nome, $assunto, $mensagem) {
+   function enviarEmail($para, $nome, $assunto, $mensagem, $contato) {
 	   
 	   require_once("phpmailer/PHPMailerAutoload.php");
 	   
@@ -74,15 +41,15 @@
 	   
 	   $Email->Subject = $assunto;
 	   
-	   $Email->Body = $mensagem;
+	   $Email->Body = $mensagem." $contato";
 	   
 	   echo "qualquer coisa";
-	   
+
 	   if ($Email->Send() )
 	       return "A mensagem não foi enviada. Erro:".$Email->ErrorInfo;
 	   else
 	       return "Mensagem enviada!";
    }
-   enviarEmail('danielcurtixpiratax@gmail.com', "BB", "teste", "mensagem teste")
+   
 
 ?>
