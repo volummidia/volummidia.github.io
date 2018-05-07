@@ -76,6 +76,8 @@
 	   
 	   $Email->Body = $mensagem;
 	   
+	   echo "qualquer coisa";
+	   
 	   if ($Email->Send() )
 	       return "A mensagem não foi enviada. Erro:".$Email->ErrorInfo;
 	   else
