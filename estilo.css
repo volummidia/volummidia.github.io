@@ -76,7 +76,7 @@ li, ul {
     left: 50%;
     width: 35%;
 }
-h6 {
+.h6 {
     position: absolute;
     right: 50%;
     font-size: 130%;
