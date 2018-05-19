@@ -55,10 +55,45 @@ a {
     color: white;
 }
 
+
  a:hover {
         text-decoration: none;
         color: #ff791f;
-    }
-    .wts:hover {
-        color: green;
-    }
+        text-decoration:none;
+}
+
+h5 {
+    font-family: cursive;
+}
+.verFotos{
+    background-color: white;
+    color: #850;
+    font-family: arial black;
+    border-color: orange;
+    border-radius: 10px;
+}
+.verFotos:hover {
+    color: black;
+    background-color: orange;
+}
+.icone {
+    width: 30px;
+    height: 30px;
+ }
+ /*BLUR NOS ICONES*/
+ .blur img {
+  -webkit-transition: all 0.1s ease;
+     -moz-transition: all 0.1s ease;
+       -o-transition: all 0.1s ease;
+      -ms-transition: all 0.1s ease;
+          transition: all 0.1s ease;
+}
+ 
+.blur img:hover {
+  -webkit-filter: blur(2px);
+}
+
+.logo {
+    font-family: arial black;
+    color: orange;
+ }

@@ -3,12 +3,12 @@
     <head>
     
 
-        <title>Volum Midia</title>
+        <title>Fale Conosco | Volum Midia</title>
 
         <!-- Meta tags necessárias -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="shortcut icon" href="icone.png" type="image/x-icon" /> 
+        <link rel="shortcut icon" href="imagens/icone.png" type="image/x-icon" /> 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-   PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
    
@@ -36,20 +36,20 @@
               <div class="collapse navbar-collapse" id="navbarNavDropdown" style="background-color: black">
                 <ul class="navbar-nav mr-auto" style="background-color: black">
                   <li class="nav-item active">
-                    <a class="nav-link" href="#home">Home<span class="sr-only"></span></a>
+                    <a class="nav-link" href="index.html">Home<span class="sr-only"></span></a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link active" href="galeria/index.html">Galeria</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" href="#contato">Fale Conosco</a>
+                    <a class="nav-link active" href="#">Fale Conosco</a>
                   </li>
                 </ul>
 
                 <!-- caixa de pesquisa e script -->      
               <div>
                 <form class="form-inline">
-                  <input type="text" class="cp" id="title" placeholder="Procure seu book" onkeyup="this.value = this.value.toLowerCase()">| 
+                  <input type="text" class="cp" id="title" placeholder="Procure seu book" onkeyup="this.value = this.value.toLowerCase()">&nbsp;|&nbsp;
                   <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Pesquisar</button>
                 </form>
                 </div><div class="lista">
@@ -103,15 +103,44 @@ title.addEventListener("keyup", function(event) {
         </div>
        </div>
       </nav>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br>
+      <div>
+      <fieldset style="border: solid; width: 80%; position: relative; left: 10%;">
+        <h1 align="center" >Fale Conosco</h1>
         <form method="POST" action="funcoes.php">
-        <input type="text" name="id" id="id">
-        <input type="text" name="title" id="title">
-        <input type="text" name="msg" id="msg">
-        <input type="text" name="contato" id="contato">
-        <input type="submit" value="Ok" >
-      </form>
+        <div><h6>Nome:</h6><input class="input" type="text" name="id" id="id"><br></div><br>
+        <div><h6>Assunto:</h6><input class="input" type="text" name="title" id="title" ><br></div><br>
+        <div><h6>Mensagem:</h6><textarea class="input" type="text" name="msg" id="msg" rows="4"></textarea><br></div><br>
+        <div><h6>Contato(E-mail/whatsapp/telefone):</h6><textarea class="input" type="text" name="contato" id="contato"></textarea></div><br>
+        <div><input style="position: relative; left: 80%;" type="submit" name="enviar" value="Enviar" ></div><br>
 
+       
+      </form>
+</fieldset>
+</div>
+<br><br>
+<div align="center">
+<h3>Você também pode entrar em contato conosco por outros meios:</h3>
+  <h5 style="color: black;">E-mail: volummidia@gmail.com</h5>
+  <h5 style="color: black;">Whatsapp: (55)99701-7282 ou (55)93243-2938</h5>
+  <h5 style="color: black;">telefone: (55)99999-9999</h5>
+  <h5 style="color: black;">Endereço: Rua gertrudes</h5>
+  <h5 style="color: black;">E-mail: volummidia@gmail.com</h5>
+</div>
+        <footer style="background-image: linear-gradient(to bottom, white, gray, black);">
+          <br><br><br><br>
+          <div class="row" style="max-width: 100%">
+            <div class="col"><br><p style="text-align: justify;">A <span class="logo">Vólum Mídia</span> tem o objetivo de te ajudar a eternizar os melhores momentos da sua vida, venha conhecer nosso trabalho, <a href="">CLIQUE AQUI</a> para falar conosco.</p></div> 
+              <div class="col"></div>
+               <div class="col"><h6 style="color: white;">Conheça nossas redes sociais:</h6>
+                <div class="blur pic row"><a href=""><img src="imagens/facebook.jpg" class="icone"> <span style="color: white;">|  Facebook</span></a></div>
+                <div class="blur pic row"><a href=""><img src="imagens/twitter.png" class="icone"><span style="color: white;"> |  Twitter</span></a> </div>
+                <div class="blur pic row"><a href=""><img src="imagens/instagram.png" class="icone"> <span style="color: white;">|   Instagram</span></a></div></div>
+
+
+          </div>
+
+        </footer>
       
     </body>
 </html>

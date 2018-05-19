@@ -6,6 +6,7 @@ a {
 }
 a:hover {
     color: orange;
+    text-decoration:none;
 }
 p {
     color: white;
