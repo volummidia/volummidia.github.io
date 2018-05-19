@@ -81,3 +81,7 @@ li, ul {
     right: 50%;
     font-size: 130%;
 }
+.begin {
+    position: absolute;
+    left: 30%;
+}
