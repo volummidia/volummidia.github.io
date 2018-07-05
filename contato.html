@@ -100,34 +100,38 @@ title.addEventListener("keyup", function(event) {
 });
 </script>
           </div>
-        </div>
-       </div>
+        </div>      
       </nav>
       <br><br><br><br>
+      <div  align="center">
       <div>
-      <fieldset style=" width: 80%; position: relative; left: 10%;">
-        <fieldset style="border: solid;">
-        <h1 align="center" >Fale Conosco</h1>
+        <table>
+        <tr align="center"><th colspan="4" style="padding-bottom: 3%;"><h1 align="center" >Fale Conosco</h1></th></tr>
         <form method="POST" action="funcoes.php">
-        <div><h6 class="h6">Nome:</h6><input class="input" type="text" name="id" id="id"><br></div><br>
-        <div><h6 class="h6">Assunto:</h6><input class="input" type="text" name="title" id="title" ><br></div><br>
-        <div><h6 class="h6">Mensagem:</h6><textarea class="input" type="text" name="msg" id="msg" rows="4"></textarea><br></div><br>
-        <div><h6 class="h6">Contato (E-mail, whatsapp, telefone):</h6><textarea class="input" type="text" name="contato" id="contato"></textarea></div><br>
-        <div><input style="position: relative; left: 70%;" type="submit" name="enviar" value="Enviar" ></div><br>
+        <tr><div><td class="espaco"><h6 style="float:  right;">Nome:</h6></td><td class="espaco"><input style="float: left;" type="text" name="id" id="id"></td></div></tr>
+        <tr><div><td class="espaco"><h6 style="float:  right;">Assunto:</h6></td><td class="espaco"><input  style="float: left;" type="text" name="title" id="title"></td></div></tr>
+        <tr><div><td class="espaco"><h6 style="float:  right;">Mensagem:</h6></td><td class="espaco"><textarea style="float: left; width: 230px;" type="text" name="msg" id="msg" rows="4"></textarea><br></td></div></tr>
+        <tr><div><td class="espaco"><h6 style="float:  right;">Contato:</h6></td><td class="espaco"><textarea style="float: left; width: 230px;" type="text" name="contato" id="contato"></textarea></td></div></tr>
+    
+        <tfoot><tr><div><td></td><td align="center"><input type="submit" name="enviar" value="Enviar" ></td></div></tr></tfoot><br>
 
        
-      </form>
-</fieldset>
+      </form>  
+    </table>
+</div>
 
 <br><br>
 
+ <table>
+<tr><th colspan="4"><h3 style="text-align: center;">Você também pode entrar em contato conosco por outros meios:</h3></th></tr>
+<tr><div class="blur"><a style="color: black" href=""><td class="centro"><img  style="float: right;" src="imagens/email.png" class="icone"></td><td class="centro" style="float: left;"><nbr>Volummidia@gmail.com</nbr></td></a></div></tr>
+<tr><div class="blur"><a style="color: black" href=""><td class="centro"><img  style="float: right;" src="imagens/whatsapp.png" class="icone"></td><td class="centro" style="float: left;">(55)99999-9999</td></a></div></tr>
+<tr><div class="blur"><a style="color: black" href=""><td class="centro"><img  style="float: right;" src="imagens/endereco.png" class="icone"></td><td class="centro" style="float: left;">Rua tapajós, centro, ametista do sul/RS</td></a></div></tr>
+<tr><div class="blur"><a style="color: black" href=""><td class="centro"><img  style="float: right;" src="imagens/telefone.png" class="icone"></td><td class="centro" style="float: left;">(55)3752-0000</td></a></div><br></tr>
+</table>
+
+
  
-<h3 style="text-align: center;">Você também pode entrar em contato conosco por outros meios:</h3>
-<div class="blur as"><a href=""><img src="imagens/email.png" class="icone"></a>&nbsp; <nbr>Volummidia@gmail.com</nbr></div>
-<div class="blur as"><a href=""><img src="imagens/whatsapp.png" class="icone"></a>&nbsp; (55)99999-9999</div>
-<div class="blur as"><a href=""><img src="imagens/endereco.png" class="icone"></a> &nbsp;Rua tapajós, centro, ametista do sul/RS</div>
-<div class="blur as"><a href=""><img src="imagens/telefone.png" class="icone"></a> &nbsp;(55)99999-9990</div><br>
-  </fieldset>
 </div>
         <footer style="background-image: linear-gradient(to bottom, white, gray, black);">
           <br><br><br><br>
@@ -138,7 +142,6 @@ title.addEventListener("keyup", function(event) {
                 <div class="blur pic row"><a href=""><img src="imagens/facebook.jpg" class="icone"> <span style="color: white;">|  Facebook</span></a></div>
                 <div class="blur pic row"><a href=""><img src="imagens/twitter.png" class="icone"><span style="color: white;"> |  Twitter</span></a> </div>
                 <div class="blur pic row"><a href=""><img src="imagens/instagram.png" class="icone"> <span style="color: white;">|   Instagram</span></a></div></div>
-
 
           </div>
 
