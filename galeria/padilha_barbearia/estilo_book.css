@@ -1,0 +1,76 @@
+body {
+    background-color: white;
+}
+a {
+    color: white;
+}
+a:hover {
+    color: orange;
+    text-decoration:none;
+}
+p {
+    color: white;
+}
+.navi {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    z-index: 1;
+    background-color: black;
+}
+
+.cp {
+    width: 150px;
+    height: 36px;
+    border-radius: 5px;
+    border-color: orange;
+}
+.lista{
+    position: fixed;
+    top: 50px;
+    right: 0;
+    width: 280px;
+}
+hr {
+    background-color: white;
+}
+
+li, ul {
+    background-color: black;
+}
+
+ .logo {
+    font-family: arial black;
+    color: orange;
+ }
+  #borda {
+    border-color: orange;
+    color:orange;
+ }
+
+ .foto {
+    max-width: 70%;
+ }
+.icone {
+    width: 30px;
+    height: 30px;
+ }
+
+ #borda {
+    border-color: orange;
+    color:orange;
+ }
+ /*BLUR NOS ICONES*/
+ .blur img {
+  -webkit-transition: all 0.1s ease;
+     -moz-transition: all 0.1s ease;
+       -o-transition: all 0.1s ease;
+      -ms-transition: all 0.1s ease;
+          transition: all 0.1s ease;
+}
+ 
+.blur img:hover {
+  -webkit-filter: blur(2px);
+}
