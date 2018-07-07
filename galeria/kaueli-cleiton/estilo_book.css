@@ -53,6 +53,9 @@ li, ul {
  .foto {
     max-width: 70%;
  }
+  .fotoV {
+    max-width: 35%;
+ }
 .icone {
     width: 30px;
     height: 30px;
