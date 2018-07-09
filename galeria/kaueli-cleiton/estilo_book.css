@@ -50,11 +50,13 @@ li, ul {
     color:orange;
  }
 
- .foto {
-    max-width: 70%;
+.foto {
+    width: 70%;
+    height: 5%;
  }
-  .fotoV {
-    max-width: 35%;
+.fotoV {
+    width: 35%;
+    height: 50%;
  }
 .icone {
     width: 30px;

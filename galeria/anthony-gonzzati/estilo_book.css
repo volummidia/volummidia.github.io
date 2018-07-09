@@ -51,10 +51,12 @@ li, ul {
  }
 
  .foto {
-    max-width: 70%;
+    width: 70%;
+    height: 5%;
  }
 .fotoV {
-    max-width: 35%;
+    width: 35%;
+    height: 50%;
  }
 .icone {
     width: 30px;
