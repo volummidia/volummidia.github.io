@@ -2,7 +2,7 @@ body {
     background-color: white;
 }
 a {
-    color: white;
+    color: white;  
 }
 a:hover {
     color: orange;
@@ -79,4 +79,7 @@ li, ul {
  
 .blur img:hover {
   -webkit-filter: blur(2px);
+}
+.recuo {
+    padding-left: 30%;
 }
