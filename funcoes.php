@@ -2,12 +2,12 @@
    pegarEnviar();
    function pegarEnviar() {
 
-   		$id = $_POST['id'];
+   		$nome = $_POST['id'];
    		$assunto = $_POST['title'];
-   		$msg = $_POST['msg'];
+   		$mensagem = $_POST['msg'];
    		$contato = $_POST['contato'];
 	   
-       enviarEmail('danielcurtixpiratax@gmail.com', "$id", "$assunto", "$msg", "$contato");
+       enviarEmail('danielcurtixpiratax@gmail.com', "$nome", "$assunto", "$mensagem", "$contato");
    }
    
    function enviarEmail($para, $nome, $assunto, $mensagem, $contato) {
@@ -43,7 +43,7 @@
 	   
 	   $Email->Body = $mensagem." $contato";
 	   
-	   echo "qualquer coisa";
+	   echo "Mensagem enviada";
 
 	   if ($Email->Send() )
 	       return "A mensagem não foi enviada. Erro:".$Email->ErrorInfo;
