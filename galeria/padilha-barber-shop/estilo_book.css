@@ -51,7 +51,7 @@ li, ul {
  }
 
  .foto {
-    width: 60%;
+    width: 70%;
     height: 5%;
  }
 .fotoV {
@@ -83,3 +83,108 @@ li, ul {
 .recuo {
     padding-left: 30%;
 }
+.lbox {
+        visibility: hidden;
+        opacity: 0;
+      }
+      .lboxv {
+        visibility: hidden;
+        opacity: 0;
+      }
+      .lbox:target {
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(10,10,10,1);
+        position: fixed;
+      }
+      .lboxv:target {
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(10,10,10,1);
+        position: fixed;
+      }
+
+      #prev {
+        position: fixed;
+        left: 5%;
+        top: 25%;
+        padding-top: 15%;
+      }
+      #next {
+        position: fixed;
+        right: 5%;
+        top: 25%;
+        padding-top: 15%;
+      }
+      #close {
+         position: fixed;
+        top: 60px;
+        right: 2%;
+      }
+      .horizontal{
+       position: absolute;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        margin: auto;
+        
+      }
+      .vertical{
+        position: absolute;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        margin: auto;
+        height: 100%;
+        width: 50%;
+      }
+      .box_img img {
+        width: 0;
+        height: 0;
+        opacity: 0;
+      }
+      .lbox:target  .box_img img {
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        transition: opacity .4s linear;
+      }
+      .lboxv:target  .box_img img {
+        width: auto;
+        height: 100%;
+        opacity: 1;
+        transition: opacity .4s linear;
+      }
+      .pn {
+        z-index: 1;
+        color: white;
+        opacity: .5;
+        width: 70px;
+        height: 80%;
+        font-size:8vw;
+      }
+      .pn:hover {
+        background:rgba(255,255,255, 0.5);
+        text-decoration: none;
+        color: white;
+      }
+      .bot {
+        z-index: 1;
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius:40px;
+        font-size:170%;
+        
+      }
+      .bot:hover {
+          background:rgba(255,255,255, 0.5);
+        text-decoration: none;
+        color: white;
+      }
