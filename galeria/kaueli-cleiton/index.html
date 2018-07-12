@@ -18,7 +18,111 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
 </head>
+<style>
+.lbox {
+        visibility: hidden;
+        opacity: 0;
+      }
+      .lboxv {
+        visibility: hidden;
+        opacity: 0;
+      }
+      .lbox:target {
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(10,10,10,1);
+        position: fixed;
+      }
+      .lboxv:target {
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(10,10,10,1);
+        position: fixed;
+      }
 
+      #prev {
+        position: fixed;
+        left: 5%;
+        top: 15%;
+        padding-top: 23%;
+      }
+      #next {
+        position: fixed;
+        right: 5%;
+        top: 15%;
+        padding-top: 23%;
+      }
+      #close {
+         position: fixed;
+        top: 60px;
+        right: 2%;
+      }
+      .horizontal{
+       position: absolute;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        margin: auto;
+        
+      }
+      .vertical{
+        position: absolute;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        margin: auto;
+        height: 100%;
+        width: 50%;
+      }
+      .box_img img {
+        width: 0;
+        height: 0;
+        opacity: 0;
+      }
+      .lbox:target  .box_img img {
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        transition: opacity .4s linear;
+      }
+      .lboxv:target  .box_img img {
+        width: auto;
+        height: 100%;
+        opacity: 1;
+        transition: opacity .4s linear;
+      }
+      .pn {
+        z-index: 1;
+        color: white;
+        width: 50px;
+        height: 80%;
+        font-size: 400%;
+      }
+      .pn:hover {
+        background:rgba(255,255,255, 0.5);
+        text-decoration: none;
+        color: white;
+      }
+      .bot {
+        z-index: 1;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius:40px;
+        font-size:240%;
+        
+      }
+      .bot:hover {
+          background:rgba(255,255,255, 0.5);
+        text-decoration: none;
+        color: white;
+      }
 </style>
 <body>
  <nav class="navbar navbar-expand-lg navbar navi navbar-dark" style="background-color: black;">
@@ -104,7 +208,7 @@ title.addEventListener("keyup", function(event) {
 
   <div id="fotos"  align="center">
     <br>
-    <a href="imagens/foto1.jpg"><img src="imagens/foto1.jpg" class="foto"><br><br></a>
+    <a href="#img1"><img src="imagens/foto1.jpg" class="foto"><br><br></a>
     <a href="imagens/foto2.jpg"><img src="imagens/foto2.jpg" class="foto"><br><br></a>
     <a href="imagens/foto3.jpg"><img src="imagens/foto3.jpg" class="foto"><br><br></a>
     <a href="imagens/foto4.jpg"><img src="imagens/foto4.jpg" class="foto"><br><br></a>
@@ -125,7 +229,7 @@ title.addEventListener("keyup", function(event) {
     <a href="imagens/foto19.jpg"><img src="imagens/foto19.jpg" class="foto"><br><br></a>
     <a href="imagens/foto9.jpg"><img src="imagens/foto9.jpg" class="foto"><br><br></a>
 
-    <a href="imagens/foto01.jpg"><img src="imagens/foto01.jpg" class="fotoV"></a>&nbsp;
+    <a href="#img01"><img src="imagens/foto01.jpg" class="fotoV"></a>&nbsp;
     <a href="imagens/foto02.jpg"><img src="imagens/foto02.jpg" class="fotoV"><br><br></a>
     <a href="imagens/foto03.jpg"><img src="imagens/foto03.jpg" class="fotoV"></a>&nbsp;
     <a href="imagens/foto04.jpg"><img src="imagens/foto04.jpg" class="fotoV"><br><br></a>
@@ -136,6 +240,22 @@ title.addEventListener("keyup", function(event) {
     <a href="imagens/foto09.jpg"><img src="imagens/foto09.jpg" class="fotoV"></a>&nbsp;
     <a href="imagens/foto010.jpg"><img src="imagens/foto010.jpg" class="fotoV"><br><br></a>
     
+    <div class="lbox" id="img1">
+        <div class="box_img">
+          <a href="#img01" class="pn" id="prev">&#171;</a>
+          <a href="" class="bot" id="close"><b>X</b></a>
+          <img src="imagens/foto1.jpg" class="horizontal">
+          <a href="#img01" class="pn" id="next">&#187;</a>
+        </div>
+      </div>
+      <div class="lboxv" id="img01">
+        <div class="box_img" align="center">
+          <a href="#img1" class="pn" id="prev">&#171;</a>
+          <a href="" class="bot" id="close">X</a>
+          <img src="imagens/foto01.jpg" class="vertical">
+          <a href="#img1" class="pn" id="next">&#187;</a>
+        </div>
+      </div>
 
   <div align="center">
   <h5><a href="../anthony-gonzzati/index.html" style="color: gray; float: left; padding-left: 10%;"> < Anterior</a>
