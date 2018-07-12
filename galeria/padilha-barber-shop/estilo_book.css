@@ -84,10 +84,12 @@ li, ul {
     padding-left: 30%;
 }
 .lbox {
+  z-index: 1;
         visibility: hidden;
         opacity: 0;
       }
       .lboxv {
+        z-index: 1;
         visibility: hidden;
         opacity: 0;
       }
