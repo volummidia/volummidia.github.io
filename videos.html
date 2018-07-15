@@ -2,8 +2,144 @@
 <html>
 <head>
 	<title>Volúm Midia | Videos</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'/>
+
+        <!-- Meta tags necessárias -->
+        <meta charset="utf-8">
+
+        <link rel="shortcut icon" href="imagens/icone.png" type="image/x-icon" /> 
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-   PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+          
+        <!-- Bibliotecas JavaScript que devem ser incluídas nessa ordem: jQuery.js, Popper.js e Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"> </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+        
+        <link href="estilo.css" rel="stylesheet">
 </head>
-<body>
-	<center><p>Página em desenvolvimento</p></center>
+<style>.ifreime {width: 50vw; height: 30vw;} </style>
+<body style="background-color: white">
+	<nav class="navbar navbar-expand-lg navbar navi navbar-dark" style="background-color: black;">
+          <a class="navbar-brand" href="index.html"><span class="logo">Vólum Mídia</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+              <div class="collapse navbar-collapse" id="navbarNavDropdown" style="background-color: black">
+                <ul class="navbar-nav mr-auto" style="background-color: black">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="galeria/index.html">Galeria</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="eventos/index.html">Eventos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="contato.html">Fale Conosco</a>
+                  </li>
+                </ul>
+
+                <!-- caixa de pesquisa e script -->      
+              <div>
+                <form class="form-inline">
+                  <input type="text" class="cp" id="title" placeholder="Procure seu book" onkeyup="this.value = this.value.toLowerCase()">&nbsp;|&nbsp;
+                  <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Pesquisar</button>
+                </form>
+                </div><div class="lista">
+                  <ul id="books" class="books" value=""></ul>
+                    <script type="text/javascript">
+  const books = [{
+     name: "Anthony Gonzatti",
+    title: "anthony gonzatti",
+    url: "galeria/anthony-gonzzati/index.html"
+  },
+  {
+    name: "Padilha Barber Shop",
+    title: "padilha barber shop",
+    url: "galeria/padilha-barber-shop/index.html"
+  },
+  {
+    name: "Kaueli & Cleiton",
+    title: "kaueli & Cleiton",
+    url: "galeria/kaueli-e-cleiton/index.html"
+  },
+  {
+     name: "Anthony Gonzatti - Festa 3 anos",
+    title: "anthony gonzatti Festa",
+    url: "eventos/anthony-gonzzati-festa/index.html"
+  }
+];
+
+// Estes elementos servirão para a manipulação do DOM: elementos HTML
+const title = document.getElementById("title");
+const list = document.getElementById("books");
+
+// Aqui atribuímos uma função ao evento `keyup` do campo no HTML
+// Isto é, sempre que uma tecla for pressionada, a função será executada:
+title.addEventListener("keyup", function(event) {
+  if (title.value!="") {
+
+  // Filtramos a lista de filmes com base no texto digitado:
+  const matchs = books.filter(value => {
+
+    // Se o texto digitado for encontrado no título, retorna o registro:
+    return value.title.indexOf(this.value) !== -1;
+
+  });
+   
+  // Exibe no HTML a lista de filmes do resultado do filtro anterior:
+  list.innerHTML = "";
+  for (let book of matchs) {
+    list.innerHTML += "<li><a href='"+book.url+"'>"+book.name+"</a></li>";
+  }
+}else{
+  list.innerHTML = "";
+}
+});
+</script>
+          </div>
+        </div>
+       </div>
+      </nav>
+      <br>
+
+<hr>
+<div align="center">
+<br> 
+  <h3><i>Assista alguns vídeos de nosso trabalho.</i></h3>
+  <br><hr><BR>
+	<iframe class="ifreime" src="https://www.youtube.com/embed/6i7hIUegbQs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br><br>
+	<h5>Making off - Festa 15 anos jiusefa</h5>
+	<p class="data">11 de junho de 2018</p>
+	<a href="https://www.youtube.com/watch?v=6i7hIUegbQs"><button class="btn btn-outline-warning my-2 my-sm-0">Ver no YouTube.</button></a>
+  <hr class="divisao">
+
+<br>
+
+<iframe class="ifreime" src="https://www.youtube.com/embed/hELbAXV5p5U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br><br>
+	<h5>Making off - Festa 15 anos acabou a imaginação</h5>
+	<p class="data">10 de junho de 2018</p>
+	<a href="https://www.youtube.com/watch?v=hELbAXV5p5U"><button class="btn btn-outline-warning my-2 my-sm-0">Ver no YouTube.</button></a>
+  <hr class="divisao">
+
+<br>
+
+<iframe class="ifreime" src="https://www.youtube.com/embed/HWSqv-xsc5o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br><br>
+	<h5>Video inauguração bar e lancheria xaçi de grilo</h5>
+	<p class="data">9 de junho de 2018</p>
+	<a href="https://www.youtube.com/watch?v=HWSqv-xsc5o"><button class="btn btn-outline-warning my-2 my-sm-0">Ver no YouTube.</button></a>
+  <hr class="divisao">
+
+<br>
+
+<iframe class="ifreime" src="https://www.youtube.com/embed/UHIGMElGyNo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br><br>
+	<h5>Making off - Festa 15 anos anfreida</h5>
+	<p class="data">1 de junho de 2018</p>
+	<a href="https://www.youtube.com/watch?v=UHIGMElGyNo"><button class="btn btn-outline-warning my-2 my-sm-0">Ver no YouTube.</button></a>
+  <hr class="divisao">
+</div>
+<br>
+
 </body>
 </html>
