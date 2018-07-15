@@ -2,8 +2,939 @@
 <html>
 <head>
 	<title>Volúm Midia | Videos</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'/>
+
+        <!-- Meta tags necessárias -->
+        <meta charset="utf-8">
+
+        <link rel="shortcut icon" href="imagens/icone.png" type="image/x-icon" /> 
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-   PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+          
+        <!-- Bibliotecas JavaScript que devem ser incluídas nessa ordem: jQuery.js, Popper.js e Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"> </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+        
+        <link href="estilo.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="video.css">
 </head>
-<body>
-	<center><p>Página em desenvolvimento</p></center>
+<style>.ifreime {width: 50vw; height: 30vw;} </style>
+<body style="background-color: white">
+	<nav class="navbar navbar-expand-lg navbar navi navbar-dark" style="background-color: black;">
+          <a class="navbar-brand" href="index.html"><span class="logo">Vólum Mídia</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+              <div class="collapse navbar-collapse" id="navbarNavDropdown" style="background-color: black">
+                <ul class="navbar-nav mr-auto" style="background-color: black">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="galeria/index.html">Galeria</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="eventos/index.html">Eventos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="contato.html">Fale Conosco</a>
+                  </li>
+                </ul>
+
+                <!-- caixa de pesquisa e script -->      
+              <div>
+                <form class="form-inline">
+                  <input type="text" class="cp" id="title" placeholder="Procure seu book" onkeyup="this.value = this.value.toLowerCase()">&nbsp;|&nbsp;
+                  <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Pesquisar</button>
+                </form>
+                </div><div class="lista">
+                  <ul id="books" class="books" value=""></ul>
+                    <script type="text/javascript">
+  const books = [{
+     name: "Anthony Gonzatti",
+    title: "anthony gonzatti",
+    url: "galeria/anthony-gonzzati/index.html"
+  },
+  {
+    name: "Padilha Barber Shop",
+    title: "padilha barber shop",
+    url: "galeria/padilha-barber-shop/index.html"
+  },
+  {
+    name: "Kaueli & Cleiton",
+    title: "kaueli & Cleiton",
+    url: "galeria/kaueli-e-cleiton/index.html"
+  },
+  {
+     name: "Anthony Gonzatti - Festa 3 anos",
+    title: "anthony gonzatti Festa",
+    url: "eventos/anthony-gonzzati-festa/index.html"
+  }
+];
+
+// Estes elementos servirão para a manipulação do DOM: elementos HTML
+const title = document.getElementById("title");
+const list = document.getElementById("books");
+
+// Aqui atribuímos uma função ao evento `keyup` do campo no HTML
+// Isto é, sempre que uma tecla for pressionada, a função será executada:
+title.addEventListener("keyup", function(event) {
+  if (title.value!="") {
+
+  // Filtramos a lista de filmes com base no texto digitado:
+  const matchs = books.filter(value => {
+
+    // Se o texto digitado for encontrado no título, retorna o registro:
+    return value.title.indexOf(this.value) !== -1;
+
+  });
+   
+  // Exibe no HTML a lista de filmes do resultado do filtro anterior:
+  list.innerHTML = "";
+  for (let book of matchs) {
+    list.innerHTML += "<li><a href='"+book.url+"'>"+book.name+"</a></li>";
+  }
+}else{
+  list.innerHTML = "";
+}
+});
+</script>
+          </div>
+        </div>
+       </div>
+      </nav>
+      <br>
+
+<hr>
+<div align="center">
+<br> 
+  <h3><i>Veja algumas fotos de divulgação.</i></h3>
+  <br></div><hr>
+      <div align="center"> 
+      <div align="center" style="width: 80%;">
+<a href='#img1'><img src='galeria/anthony-gonzzati/imagens/foto1.jpg' class='foto'></a>
+<a href='#img2'><img src='galeria/anthony-gonzzati/imagens/foto2.jpg' class='foto'></a>
+<a href='#img3'><img src='galeria/anthony-gonzzati/imagens/foto3.jpg' class='foto'></a>
+<a href='#img4'><img src='galeria/anthony-gonzzati/imagens/foto4.jpg' class='foto'></a>
+<a href='#img5'><img src='galeria/anthony-gonzzati/imagens/foto5.jpg' class='foto'></a>
+<a href='#img6'><img src='galeria/anthony-gonzzati/imagens/foto6.jpg' class='foto'></a>
+<a href='#img7'><img src='galeria/anthony-gonzzati/imagens/foto7.jpg' class='foto'></a>
+<a href='#img8'><img src='galeria/anthony-gonzzati/imagens/foto8.jpg' class='foto'></a>
+<a href='#img9'><img src='galeria/anthony-gonzzati/imagens/foto9.jpg' class='foto'></a>
+<a href='#img10'><img src='galeria/anthony-gonzzati/imagens/foto10.jpg' class='foto'></a>
+<a href='#img11'><img src='galeria/anthony-gonzzati/imagens/foto11.jpg' class='foto'></a>
+<a href='#img12'><img src='galeria/anthony-gonzzati/imagens/foto12.jpg' class='foto'></a>
+<a href='#img13'><img src='galeria/anthony-gonzzati/imagens/foto13.jpg' class='foto'></a>
+<a href='#img14'><img src='galeria/anthony-gonzzati/imagens/foto14.jpg' class='foto'></a>
+<a href='#img15'><img src='galeria/anthony-gonzzati/imagens/foto15.jpg' class='foto'></a>
+<a href='#img16'><img src='galeria/anthony-gonzzati/imagens/foto16.jpg' class='foto'></a>
+<a href='#img17'><img src='galeria/anthony-gonzzati/imagens/foto17.jpg' class='foto'></a>
+<a href='#img18'><img src='galeria/anthony-gonzzati/imagens/foto18.jpg' class='foto'></a>
+<a href='#img19'><img src='galeria/anthony-gonzzati/imagens/foto19.jpg' class='foto'></a>
+<a href='#img20'><img src='galeria/anthony-gonzzati/imagens/foto20.jpg' class='foto'></a>
+<a href='#img21'><img src='galeria/anthony-gonzzati/imagens/foto21.jpg' class='foto'></a>
+<a href='#img22'><img src='galeria/anthony-gonzzati/imagens/foto22.jpg' class='foto'></a>
+<a href='#img23'><img src='galeria/anthony-gonzzati/imagens/foto23.jpg' class='foto'></a>
+<a href='#img24'><img src='galeria/anthony-gonzzati/imagens/foto24.jpg' class='foto'></a>
+<a href='#img25'><img src='galeria/anthony-gonzzati/imagens/foto25.jpg' class='foto'></a>
+<a href='#img26'><img src='galeria/anthony-gonzzati/imagens/foto26.jpg' class='foto'></a>
+<a href='#img27'><img src='galeria/anthony-gonzzati/imagens/foto27.jpg' class='foto'></a>
+<a href='#img28'><img src='galeria/anthony-gonzzati/imagens/foto28.jpg' class='foto'></a>
+<a href='#img29'><img src='galeria/anthony-gonzzati/imagens/foto29.jpg' class='foto'></a>
+<a href='#img30'><img src='galeria/anthony-gonzzati/imagens/foto30.jpg' class='foto'></a>
+<a href='#img31'><img src='galeria/anthony-gonzzati/imagens/foto31.jpg' class='foto'></a>
+<a href='#img32'><img src='galeria/anthony-gonzzati/imagens/foto32.jpg' class='foto'></a>
+<a href='#img33'><img src='galeria/anthony-gonzzati/imagens/foto33.jpg' class='foto'></a>
+<a href='#img34'><img src='galeria/anthony-gonzzati/imagens/foto34.jpg' class='foto'></a>
+<a href='#img35'><img src='galeria/anthony-gonzzati/imagens/foto35.jpg' class='foto'></a>
+<a href='#img36'><img src='galeria/anthony-gonzzati/imagens/foto36.jpg' class='foto'></a>
+<a href='#img37'><img src='galeria/anthony-gonzzati/imagens/foto37.jpg' class='foto'></a>
+<a href='#img1'><img src='galeria/anthony-gonzzati/imagens/foto01.jpg' class='fotov'></a>
+<a href='#img2'><img src='galeria/anthony-gonzzati/imagens/foto02.jpg' class='fotov'></a>
+<a href='#img3'><img src='galeria/anthony-gonzzati/imagens/foto03.jpg' class='fotov'></a>
+<a href='#img4'><img src='galeria/anthony-gonzzati/imagens/foto04.jpg' class='fotov'></a>
+<a href='#img5'><img src='galeria/anthony-gonzzati/imagens/foto05.jpg' class='fotov'></a>
+<a href='#img6'><img src='galeria/anthony-gonzzati/imagens/foto06.jpg' class='fotov'></a>
+<a href='#img7'><img src='galeria/anthony-gonzzati/imagens/foto07.jpg' class='fotov'></a>
+<a href='#img8'><img src='galeria/anthony-gonzzati/imagens/foto08.jpg' class='fotov'></a>
+<a href='#img9'><img src='galeria/anthony-gonzzati/imagens/foto09.jpg' class='fotov'></a>
+<a href='#img10'><img src='galeria/anthony-gonzzati/imagens/foto010.jpg' class='fotov'></a>
+<a href='#img11'><img src='galeria/anthony-gonzzati/imagens/foto011.jpg' class='fotov'></a>
+<a href='#img12'><img src='galeria/anthony-gonzzati/imagens/foto012.jpg' class='fotov'></a>
+<a href='#img13'><img src='galeria/anthony-gonzzati/imagens/foto013.jpg' class='fotov'></a>
+<div class='lboxv' id='img01'>
+
+        <div class='box_img'>
+
+          <a href='#img1' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto01.jpg' class='horizontal'>
+
+          <a href='#img02' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lboxv' id='img02'>
+
+        <div class='box_img'>
+
+          <a href='#img01' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto02.jpg' class='horizontal'>
+
+          <a href='#img03' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lboxv' id='img03'>
+
+        <div class='box_img'>
+
+          <a href='#img02' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto03.jpg' class='horizontal'>
+
+          <a href='#img04' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lboxv' id='img04'>
+
+        <div class='box_img'>
+
+          <a href='#img03' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto04.jpg' class='horizontal'>
+
+          <a href='#img05' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lboxv' id='img05'>
+
+        <div class='box_img'>
+
+          <a href='#img04' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto05.jpg' class='horizontal'>
+
+          <a href='#img06' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lboxv' id='img06'>
+
+        <div class='box_img'>
+
+          <a href='#img05' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto06.jpg' class='horizontal'>
+
+          <a href='#img07' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lboxv' id='img07'>
+
+        <div class='box_img'>
+
+          <a href='#img06' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto07.jpg' class='horizontal'>
+
+          <a href='#img08' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lboxv' id='img08'>
+
+        <div class='box_img'>
+
+          <a href='#img07' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto08.jpg' class='horizontal'>
+
+          <a href='#img09' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lboxv' id='img09'>
+
+        <div class='box_img'>
+
+          <a href='#img08' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto09.jpg' class='horizontal'>
+
+          <a href='#img010' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lboxv' id='img010'>
+
+        <div class='box_img'>
+
+          <a href='#img09' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto010.jpg' class='horizontal'>
+
+          <a href='#img011' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lboxv' id='img011'>
+
+        <div class='box_img'>
+
+          <a href='#img010' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto011.jpg' class='horizontal'>
+
+          <a href='#img012' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lboxv' id='img012'>
+
+        <div class='box_img'>
+
+          <a href='#img011' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto012.jpg' class='horizontal'>
+
+          <a href='#img013' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lboxv' id='img013'>
+
+        <div class='box_img'>
+
+          <a href='#img012' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto013.jpg' class='horizontal'>
+
+          <a href='#img1' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img1'>
+
+        <div class='box_img'>
+
+          <a href='#img013' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto1.jpg' class='horizontal'>
+
+          <a href='#img2' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img2'>
+
+        <div class='box_img'>
+
+          <a href='#img1' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto2.jpg' class='horizontal'>
+
+          <a href='#img3' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img3'>
+
+        <div class='box_img'>
+
+          <a href='#img2' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto3.jpg' class='horizontal'>
+
+          <a href='#img4' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img4'>
+
+        <div class='box_img'>
+
+          <a href='#img3' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto4.jpg' class='horizontal'>
+
+          <a href='#img5' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img5'>
+
+        <div class='box_img'>
+
+          <a href='#img4' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto5.jpg' class='horizontal'>
+
+          <a href='#img6' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img6'>
+
+        <div class='box_img'>
+
+          <a href='#img5' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto6.jpg' class='horizontal'>
+
+          <a href='#img7' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img7'>
+
+        <div class='box_img'>
+
+          <a href='#img6' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto7.jpg' class='horizontal'>
+
+          <a href='#img8' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img8'>
+
+        <div class='box_img'>
+
+          <a href='#img7' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto8.jpg' class='horizontal'>
+
+          <a href='#img9' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img9'>
+
+        <div class='box_img'>
+
+          <a href='#img8' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto9.jpg' class='horizontal'>
+
+          <a href='#img10' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img10'>
+
+        <div class='box_img'>
+
+          <a href='#img9' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto10.jpg' class='horizontal'>
+
+          <a href='#img11' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img11'>
+
+        <div class='box_img'>
+
+          <a href='#img10' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto11.jpg' class='horizontal'>
+
+          <a href='#img12' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img12'>
+
+        <div class='box_img'>
+
+          <a href='#img11' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto12.jpg' class='horizontal'>
+
+          <a href='#img13' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img13'>
+
+        <div class='box_img'>
+
+          <a href='#img12' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto13.jpg' class='horizontal'>
+
+          <a href='#img14' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img14'>
+
+        <div class='box_img'>
+
+          <a href='#img13' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto14.jpg' class='horizontal'>
+
+          <a href='#img15' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img15'>
+
+        <div class='box_img'>
+
+          <a href='#img14' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto15.jpg' class='horizontal'>
+
+          <a href='#img16' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img16'>
+
+        <div class='box_img'>
+
+          <a href='#img15' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto16.jpg' class='horizontal'>
+
+          <a href='#img17' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img17'>
+
+        <div class='box_img'>
+
+          <a href='#img16' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto17.jpg' class='horizontal'>
+
+          <a href='#img18' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img18'>
+
+        <div class='box_img'>
+
+          <a href='#img17' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto18.jpg' class='horizontal'>
+
+          <a href='#img19' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img19'>
+
+        <div class='box_img'>
+
+          <a href='#img18' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto19.jpg' class='horizontal'>
+
+          <a href='#img20' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img20'>
+
+        <div class='box_img'>
+
+          <a href='#img19' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto20.jpg' class='horizontal'>
+
+          <a href='#img21' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img21'>
+
+        <div class='box_img'>
+
+          <a href='#img20' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto21.jpg' class='horizontal'>
+
+          <a href='#img22' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img22'>
+
+        <div class='box_img'>
+
+          <a href='#img21' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto22.jpg' class='horizontal'>
+
+          <a href='#img23' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img23'>
+
+        <div class='box_img'>
+
+          <a href='#img22' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto23.jpg' class='horizontal'>
+
+          <a href='#img24' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img24'>
+
+        <div class='box_img'>
+
+          <a href='#img23' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto24.jpg' class='horizontal'>
+
+          <a href='#img25' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img25'>
+
+        <div class='box_img'>
+
+          <a href='#img24' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto25.jpg' class='horizontal'>
+
+          <a href='#img26' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img26'>
+
+        <div class='box_img'>
+
+          <a href='#img25' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto26.jpg' class='horizontal'>
+
+          <a href='#img27' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img27'>
+
+        <div class='box_img'>
+
+          <a href='#img26' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto27.jpg' class='horizontal'>
+
+          <a href='#img28' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img28'>
+
+        <div class='box_img'>
+
+          <a href='#img27' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto28.jpg' class='horizontal'>
+
+          <a href='#img29' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img29'>
+
+        <div class='box_img'>
+
+          <a href='#img28' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto29.jpg' class='horizontal'>
+
+          <a href='#img30' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img30'>
+
+        <div class='box_img'>
+
+          <a href='#img29' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto30.jpg' class='horizontal'>
+
+          <a href='#img31' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img31'>
+
+        <div class='box_img'>
+
+          <a href='#img30' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto31.jpg' class='horizontal'>
+
+          <a href='#img32' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img32'>
+
+        <div class='box_img'>
+
+          <a href='#img31' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto32.jpg' class='horizontal'>
+
+          <a href='#img33' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img33'>
+
+        <div class='box_img'>
+
+          <a href='#img32' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto33.jpg' class='horizontal'>
+
+          <a href='#img34' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img34'>
+
+        <div class='box_img'>
+
+          <a href='#img33' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto34.jpg' class='horizontal'>
+
+          <a href='#img35' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img35'>
+
+        <div class='box_img'>
+
+          <a href='#img34' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto35.jpg' class='horizontal'>
+
+          <a href='#img36' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img36'>
+
+        <div class='box_img'>
+
+          <a href='#img35' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto36.jpg' class='horizontal'>
+
+          <a href='#img37' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+<div class='lbox' id='img37'>
+
+        <div class='box_img'>
+
+          <a href='#img36' class='pn' id='prev'>&#171;</a>
+
+          <a href='' class='bot' id='close'><b>X</b></a>
+
+          <img src='galeria/anthony-gonzzati/imagens/foto37.jpg' class='horizontal'>
+
+          <a href='#img01' class='pn' id='next'>&#187;</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+<hr>
+ <footer style="background-image: linear-gradient(to bottom, white, gray, black);">
+            <br><br><br><br>
+          <div class="row" style="max-width: 100%">
+            <div class="col"><p style="color: white; text-align: justify;">A <span class="logo">Vólum Mídia</span> tem o objetivo de te ajudar a eternizar os melhores momentos da sua vida, venha conhecer nosso trabalho, <a href="../contato.html">CLIQUE AQUI</a> para falar conosco.</p></div> 
+              
+               <div class="col" align="center"><h6 style="color: white;">Conheça nossas redes sociais:</h6>
+                <div class="blur row recuov"><a href=""><img src="imagens/twitter.png" class="icone"> <span style="color: white;">|  Twitter</span></a> </div>
+
+                <div class="blur row recuov"><a href="https://www.facebook.com/volummidia/"><img src="imagens/facebook.jpg" class="icone"> <span style="color: white;">|  Facebook</span></a></div>
+                
+                <div class="blur row recuov"><a href="https://www.instagram.com/volummidia/?hl=pt-br"><img src="imagens/instagram.png" class="icone"> <span style="color: white;">|   Instagram</span></a></div></div>
+
+
+          </div>
+          <div align="center">
+          <span class="small" style="color: white">Página desenvolvida por <a href="https://www.facebook.com/danielhenrique.lucietto?ref=bookmarks">Daniel H. Curti</a> - © 2018</span> </div>
+        </footer>
+
 </body>
 </html>

@@ -1,0 +1,191 @@
+body {
+    background-color: white;
+}
+a {
+    color: white;
+}
+a:hover {
+    color: orange;
+    text-decoration:none;
+}
+p {
+    color: white;
+}
+.navi {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    z-index: 1;
+    background-color: black;
+}
+
+.cp {
+    width: 150px;
+    height: 36px;
+    border-radius: 5px;
+    border-color: orange;
+}
+.lista{
+    position: fixed;
+    top: 50px;
+    right: 0;
+    width: 280px;
+}
+hr {
+    background-color: white;
+}
+
+li, ul {
+    background-color: black;
+}
+
+ .logo {
+    font-family: arial black;
+    color: orange;
+ }
+  #borda {
+    border-color: orange;
+    color:orange;
+ }
+
+ .foto {
+    width: 30%;
+    height: 5%;
+ }
+.fotov {
+    width: 15%;
+    height: 5%;
+ }
+.icone {
+    width: 30px;
+    height: 30px;
+ }
+
+ #borda {
+    border-color: orange;
+    color:orange;
+ }
+ /*BLUR NOS ICONES*/
+ .blur img {
+  -webkit-transition: all 0.1s ease;
+     -moz-transition: all 0.1s ease;
+       -o-transition: all 0.1s ease;
+      -ms-transition: all 0.1s ease;
+          transition: all 0.1s ease;
+}
+ 
+.blur img:hover {
+  -webkit-filter: blur(2px);
+}
+.recuo {
+    padding-left: 30%;
+}
+.lbox {
+  z-index: 1;
+        visibility: hidden;
+        opacity: 0;
+      }
+      .lboxv {
+        z-index: 1;
+        visibility: hidden;
+        opacity: 0;
+      }
+      .lbox:target {
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(10,10,10,1);
+        position: fixed;
+      }
+      .lboxv:target {
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(10,10,10,1);
+        position: fixed;
+      }
+
+      #prev {
+        position: fixed;
+        left: 5%;
+        top: 25%;
+        padding-top: 15%;
+      }
+      #next {
+        position: fixed;
+        right: 5%;
+        top: 25%;
+        padding-top: 15%;
+      }
+      #close {
+         position: fixed;
+        top: 60px;
+        right: 2%;
+      }
+      .horizontal{
+       position: absolute;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        margin: auto;
+        
+      }
+      .vertical{
+        position: absolute;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        margin: auto;
+        height: 100%;
+        width: 50%;
+      }
+      .box_img img {
+        width: 0;
+        height: 0;
+        opacity: 0;
+      }
+      .lbox:target  .box_img img {
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        transition: opacity .4s linear;
+      }
+      .lboxv:target  .box_img img {
+        width: auto;
+        height: 100%;
+        opacity: 1;
+        transition: opacity .4s linear;
+      }
+      .pn {
+        z-index: 1;
+        color: white;
+        opacity: .5;
+        width: 70px;
+        height: 80%;
+        font-size:8vw;
+      }
+      .pn:hover {
+        background:rgba(255,255,255, 0.5);
+        text-decoration: none;
+        color: white;
+      }
+      .bot {
+        z-index: 1;
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius:40px;
+        font-size:170%;
+        
+      }
+      .bot:hover {
+          background:rgba(255,255,255, 0.5);
+        text-decoration: none;
+        color: white;
+      }
